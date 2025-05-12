@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="net.aetherialkilix.jackson.nix.NixGeneratorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-05-11T22:10:51" hostname="epimetheus" time="0.239">
+  <properties/>
+  <testcase name="test multiple root keys()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.22"/>
+  <testcase name="test mixed collapse and sibling()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.003"/>
+  <testcase name="test array with primitives()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.004"/>
+  <testcase name="test simple number collapse()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.003"/>
+  <testcase name="test null value()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.002"/>
+  <testcase name="test simple boolean collapse()" classname="net.aetherialkilix.jackson.nix.NixGeneratorTest" time="0.002"/>
+  <system-out><![CDATA[collapsing [PropertyName(foo), StartObject, PropertyName(x), NameValueSeparator, Value(1), EndObject(1)] into [PropertyName(foo.x), NameValueSeparator, Value(1)]
+object complete: [StartObject, PropertyName(foo.x), NameValueSeparator, Value(1), ObjectEntrySeparator, PropertyName(bar), NameValueSeparator, Value(null), EndObject(2)]
+collapsing [PropertyName(b), StartObject, PropertyName(c), NameValueSeparator, Value(42), EndObject(1)] into [PropertyName(b.c), NameValueSeparator, Value(42)]
+object complete: [StartObject, PropertyName(a), NameValueSeparator, StartObject, PropertyName(b.c), NameValueSeparator, Value(42), ObjectEntrySeparator, PropertyName(d), NameValueSeparator, Value(false), EndObject(2), EndObject(1)]
+object complete: [StartObject, PropertyName(list), NameValueSeparator, StartArray, Value(1), ArrayValueSeparator, Value(2), ArrayValueSeparator, Value(3), EndArray, EndObject(1)]
+collapsing [PropertyName(b), StartObject, PropertyName(c), NameValueSeparator, Value(42), EndObject(1)] into [PropertyName(b.c), NameValueSeparator, Value(42)]
+collapsing [PropertyName(a), StartObject, PropertyName(b.c), NameValueSeparator, Value(42), EndObject(1)] into [PropertyName(a.b.c), NameValueSeparator, Value(42)]
+object complete: [StartObject, PropertyName(a.b.c), NameValueSeparator, Value(42), EndObject(1)]
+collapsing [PropertyName(config), StartObject, PropertyName(path), NameValueSeparator, Value(null), EndObject(1)] into [PropertyName(config.path), NameValueSeparator, Value(null)]
+object complete: [StartObject, PropertyName(config.path), NameValueSeparator, Value(null), EndObject(1)]
+collapsing [PropertyName(flag), StartObject, PropertyName(enabled), NameValueSeparator, Value(true), EndObject(1)] into [PropertyName(flag.enabled), NameValueSeparator, Value(true)]
+object complete: [StartObject, PropertyName(flag.enabled), NameValueSeparator, Value(true), EndObject(1)]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
